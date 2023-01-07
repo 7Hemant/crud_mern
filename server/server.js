@@ -9,10 +9,10 @@ const app = express();
 app.use(cors());
 app.use(bodyparser.json());
 
-app.use("/api/vi", PostRoute);
+app.use("/api/v1", PostRoute);
 mongoose.set("strictQuery", true);
 ConnectedDB().then(
-  app.listen(3000, () => {
+  app.listen(5000, () => {
     console.log("running");
   })
 );

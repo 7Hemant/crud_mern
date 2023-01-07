@@ -1,10 +1,16 @@
 const express = require("express");
+const {
+  createPost,
+  ReadPost,
+  updatePost,
+  deletePost,
+} = require("../controllers/PostController");
 
 const PostRoute = express.Router();
 
-PostRoute.post("/create", () => {});
-PostRoute.get("/read", () => {});
-PostRoute.patch("/update/:id", () => {});
-PostRoute.delete("/delete/:id", () => {});
+PostRoute.get("/read", ReadPost);
+PostRoute.post("/create", createPost);
+PostRoute.patch("/update/:id", updatePost);
+PostRoute.delete("/delete/:id", deletePost);
 
 module.exports = PostRoute;
