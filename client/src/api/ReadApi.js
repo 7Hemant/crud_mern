@@ -7,7 +7,9 @@ const CallAPIFunction = async () => {
   return await res.data;
 };
 const ReadApi = () => {
-  return useQuery("Read", () => CallAPIFunction());
+  return useQuery("Read", () => CallAPIFunction(), {
+    staleTime: 3000,
+  });
 };
 
 export default ReadApi;
