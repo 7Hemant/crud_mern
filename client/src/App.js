@@ -1,10 +1,15 @@
-import logo from "./logo.svg";
+import ReadComponent from "./components/ReadComponent";
+import FormComponent from "./components/FormComponent";
+import { Typography } from "@mui/material";
 import "./App.css";
-
 function App() {
   return (
     <div className="App">
-      <h1>set up</h1>
+      <Typography align="center" variant="h5">
+        Mern curd Application
+      </Typography>
+      <FormComponent />
+      <ReadComponent />
     </div>
   );
 }

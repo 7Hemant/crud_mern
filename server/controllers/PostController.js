@@ -2,7 +2,6 @@ const Post = require("../modules/Post");
 
 exports.createPost = async (req, res) => {
   const { title, description } = req.body;
-
   const CreatedPost = await Post.create({
     title,
     description,
