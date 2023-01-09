@@ -14,7 +14,7 @@ exports.createPost = async (req, res) => {
 exports.ReadPost = async (req, res) => {
   const posts = await Post.find();
   res.json({
-    message: "working",
+    message: "readpost",
     posts: posts,
   });
 };
@@ -36,7 +36,7 @@ exports.updatePost = async (req, res) => {
     { new: true }
   );
   res.json({
-    message: "working",
+    message: "update",
     post: updatepost,
   });
 };
@@ -49,7 +49,7 @@ exports.deletePost = async (req, res) => {
   }
   await post.remove();
   res.json({
-    message: "working",
+    message: "delete",
     id: post._id,
   });
 };
